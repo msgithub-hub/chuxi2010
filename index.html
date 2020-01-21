@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>jeep your new year </title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <style>
+        .goldWords {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 12vw;
+            left: 0;
+            animation: flash1 3s infinite;
+        }
+        @keyframes flash1 {
+            0% {
+                opacity: 0.76;
+                /* transform: scale(0); */
+            }
+
+            20% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            40% {
+                opacity: 0.5;
+                /* transform: scale(1); */
+            }
+            60% {
+                opacity: 0.7;
+                /* transform: scale(1); */
+            }
+            80% {
+                opacity: 1.0;
+                transform: scale(1.3);
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+
+        }
+
+        .car {
+            width: 18%;
+            height: auto;
+            position: absolute;
+            bottom: 59px;
+            left: 13%;
+            opacity: 1;
+            animation: flash2 3.5s infinite;
+        }
+        @keyframes flash2 {
+            0% {
+                left: 13%;
+            }
+            100% {
+                left: 68%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="content_body ">
+    <!--背景音乐-->
+    <audio id="bgAudio" src="image/bgMusic.mp3" style="display: none;"></audio>
+    <!--卷轴打开音乐-->
+    <audio id="jzAudio" src="image/juanzhouMusic.mp3" style="display: none;"></audio>
+
+    <img src="image/logo.png" class="logo">
+    <img src="image/goldImg.png" class="goldImg">
+    <img src="image/title.png" class="title">
+    <div class="bottomImg">
+        <ul class="redbagUl ">
+            <li class="redbagli wave animated">
+                <img src="image/redBag.png" class="redBag">
+                <img src="image/goldWords.png" class="goldWords">
+            </li>
+            <li class="redbagli wave animated">
+                <img src="image/redBag.png" class="redBag">
+                <img src="image/goldWords.png" class="goldWords">
+            </li>
+            <li class="redbagli redbagli3 wave animated">
+                <img src="image/redBag.png" class="redBag">
+                <img src="image/goldWords.png" class="goldWords">
+            </li>
+        </ul>
+        <img src="image/locationSomethingBtn.png" class="locationSomethingBtn">
+    </div>
+    <img src="image/smallBottomImg.png" class="smallBottomImg">
+
+</div>
+
+<!--游戏规则模态框-->
+<div class="ruleMask none">
+    <div class="ruleMaskposition">
+        <!--<img src="image/ruleBg.png" class="ruleBg">-->
+        <img src="image/rule1.png" class="rule1">
+        <img src="image/rule2.png" class="rule2">
+        <p class="ruleWord none">
+            <img src="image/ruleWord.png" class="ruleWordImg">
+        </p>
+        <img src="image/closeBtn.png" class="closeBtn wave none">
+    </div>
+
+</div>
+
+<!--中奖状态模态框-->
+<div class="mask none">
+    <div class="maskPosition">
+        <!--中奖了-->
+        <div class="yesSuccess none">
+            <img src="image/redJuan.png" class="redJuan animated fadeInUp">
+            <img src="image/mouse1.gif" class="mouse1 animated fadeInDown">
+            <!--&lt;!&ndash;jeep your new year字体&ndash;&gt;-->
+            <!--<img src="image/wordMove.gif" class="wordMove none">-->
+
+            <!--独鼠一帜-->
+            <img src="image/zhufu1.png" class="zhufu1 animated zoomInUp none">
+            <!--非你莫鼠-->
+            <img src="image/zhufu2.png" class="zhufu2 animated zoomInUp none">
+            <!--鼠兆丰年-->
+            <img src="image/zhufu3.png" class="zhufu3 animated zoomInUp none">
+            <!--辞旧迎新-->
+            <img src="image/zhufu4.png" class="zhufu4 animated zoomInUp none">
+            <!--万象更新-->
+            <img src="image/zhufu5.png" class="zhufu5 animated zoomInUp ">
+
+            <img src="image/chouAgain.png" class="redKnowBtn wave KnowBtn animated fadeInDown">
+        </div>
+
+        <!--没中奖-->
+        <div class="noSuccess none">
+            <img src="image/redJuan.png" class="yellowJuan animated fadeInUp">
+            <!--jeep your new year字体-->
+            <img src="image/wordMove.gif" class="wordMoveYellow">
+
+            <img src="image/car.png" class="car">
+            <img src="image/chouAgain.png" class="yellowKnowBtn wave KnowBtn animated fadeInDown">
+        </div>
+    </div>
+</div>
+
+<!--获奖记录模态框-->
+<div class="locationMask none">
+    <div class="locationPosition">
+        <div class="bottomDiv">
+            <ul class="locationUl">
+                <li class="locationLi">01-20 19:00 非你莫鼠奖</li>
+                <li class="locationLi">01-20 19:00 独鼠一帜奖</li>
+                <li class="locationLi">01-20 19:00 辞旧迎新奖</li>
+                <li class="locationLi">01-20 19:00 万象更新奖</li>
+                <li class="locationLi">01-20 19:00 鼠兆丰年奖</li>
+            </ul>
+
+        </div>
+        <img src="image/closeBtn.png" class="closeBtn2 wave">
+    </div>
+</div>
+
+<!--游戏结束模态框-->
+<div class="gameEndMask">
+    <div class="endPosition">
+        <img src="image/yellowJuan.png" class="JuanYellow animated fadeInUp">
+        <img src="image/endWord.png" class="endWord animated fadeInDown">
+        <img src="image/yellowKnowBtn.png" class="KnowBtnYellow wave  animated fadeInDown">
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+
+<!--<script src="node_modules/lbd-wx-sdk/dist/index.js"></script>-->
+<script>
+    // 如果不想做分享
+    /*function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    }
+
+    if (typeof WeixinJSBridge == "undefined") {
+        if (document.addEventListener) {
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    } else {
+        onBridgeReady();
+    }*/
+</script>
+
+<script>
+    let bgAudio = document.getElementById('bgAudio');
+    let jzAudio = document.getElementById('jzAudio');
+    $(function () {
+        audioAutoPlayPlan(bgAudio);
+        audioAutoPlayPlan(jzAudio);
+        bgAudio.play();
+        $(".rule1").animate({'height': 'auto', 'top': '0px'}, 1500);
+        $(".rule2").animate({'height': '83vw', 'top': '70px'}, 1500, function () {
+            $(".ruleWord").fadeIn(2100);
+            $(".closeBtn").fadeIn(2200);
+        });
+
+        //关闭游戏规则模态框
+        $('.closeBtn').click(function () {
+            // bgAudio1();
+            $(".ruleMask").hide();
+        });
+
+
+        // 点击红包来抽奖
+        $('.redbagli').click(function () {
+            jzAudio.play();//播放卷轴打开的声音
+            setTimeout(function () {
+                $(".mask").show();
+                // 他中奖了
+                // $(".yesSuccess").show();
+
+                // 他没中奖（里面有汽车运动效果）
+                $(".noSuccess").show();
+            }, 500);
+        });
+
+
+        $('.KnowBtn').click(function () {
+            $(".mask").hide();
+        });
+
+
+        //开启获奖记录模态框
+        $('.locationSomethingBtn').click(function () {
+            $(".locationMask").show();
+        });
+
+        //关闭获奖记录模态框
+        $('.closeBtn2').click(function () {
+            $(".locationMask").hide();
+        });
+
+        //关闭游戏结束模态框
+        $('.KnowBtnYellow').click(function () {
+            $(".gameEndMask").hide();
+        });
+
+    });
+
+
+    function audioAutoPlayPlan(id) {
+        let audio = document.getElementById(id),
+            play = function () {
+                audio.play();
+                audio.pause();
+                //document.removeEventListener("touchstart", play, false);
+            };
+        // audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+        }, false);
+    }
+
+</script>
+</body>
+</html>
